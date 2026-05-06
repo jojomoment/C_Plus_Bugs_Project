@@ -4,6 +4,8 @@
 
 #include "Bug.h"
 
+using namespace std;
+
 Bug::Bug(int id, int x, int y, int dir, int health)
 {
     this->id = id;
@@ -17,3 +19,4 @@ Bug::Bug(int id, int x, int y, int dir, int health)
 int Bug::getId() { return id; }
 pair<int,int> Bug::getPosition() { return position; }
 bool Bug::isAlive() { return alive; }
+bool Bug::isWayBlocked(){return false;}

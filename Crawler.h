@@ -10,8 +10,7 @@ class Crawler : public Bug
 
 public: // accessable outside of class
 
-    //default constructor
-    Crawler();
+
 
     //constructor
     Crawler(int id,int x,int y,int direction,int health);

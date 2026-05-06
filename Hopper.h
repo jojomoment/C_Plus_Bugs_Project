@@ -7,10 +7,10 @@
 
 class Hopper : public Bug
 {
-    private:
+private:
     int hopperJumpLength;
 
-    public:
+public:
     Hopper(int id, int x, int y, int dir, int health, int hop);
 
     void move() override;
