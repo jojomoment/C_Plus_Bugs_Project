@@ -19,7 +19,7 @@ protected:
 public:
     Bug(int id, int x, int y, int dir, int health);
 
-    virtual void move() = 0; // PURE virtual
+    virtual void move() = 0;
 
     bool isWayBlocked();
 
