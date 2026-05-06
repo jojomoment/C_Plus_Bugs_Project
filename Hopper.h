@@ -2,7 +2,15 @@
 // Created by Elvis on 06/05/2026.
 //
 
-#ifndef TEST_HOPPER_H
-#define TEST_HOPPER_H
+#pragma once
+#include "Bug.h"
 
-#endif //TEST_HOPPER_H
+class Hopper : public Bug {
+    private:
+    int hopperJumpLength;
+
+    public:
+    Hopper(int id, int x, int y, int dir, int health, int hop);
+
+    void move() override;
+};
