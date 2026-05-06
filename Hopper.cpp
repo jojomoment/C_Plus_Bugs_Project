@@ -6,13 +6,15 @@
 #include <cstdlib>
 
 Hopper::Hopper(int id, int x, int y, int dir, int health, int hop)
+: Bug(id, x, y, dir, health)
 {
-    Bug(id, x, y, dir, health);
+
     {
         hopperJumpLength = hop;
     }
 
-    void Hopper::move(); {
+    void Hopper::move()
+    {
         if (!alive) return;
 
         while (isWayBlocked())
@@ -35,3 +37,5 @@ Hopper::Hopper(int id, int x, int y, int dir, int health, int hop)
     }
 
 }
+
+

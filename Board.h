@@ -13,6 +13,7 @@ class Board {
     public:
     void loadFromFile();
     void displayBugs();
-    void findBug();
+    void findBug(int id);
     void tap();
+
 };
