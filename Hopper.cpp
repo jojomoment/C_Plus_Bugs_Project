@@ -7,7 +7,7 @@
 
 Hopper::Hopper(int id, int x, int y, int dir, int health, int hop)
 : Bug(id, x, y, dir, health)
-{
+
 
     {
         hopperJumpLength = hop;
@@ -36,6 +36,6 @@ Hopper::Hopper(int id, int x, int y, int dir, int health, int hop)
 
     }
 
-}
+
 
 

@@ -13,7 +13,8 @@
 }]]></component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="Project" targetName="test" />
+      <config projectName="C_Plus_Bugs_Project" targetName="C_Plus_Bugs_Project" />
+      <config projectName="C_Plus_Bugs_Project" targetName="test" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -22,15 +23,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fcd4aed-2840-49be-9080-02d6987a5da4" name="Changes" comment="Did the board fully - functions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Board.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/Board.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hopper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hopper.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" />
-    </list>
+    <list default="true" id="5fcd4aed-2840-49be-9080-02d6987a5da4" name="Changes" comment="Fixes and broken" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +62,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "C/C++ File.main.cpp.executor": "Run",
+    "CMake Application.C_Plus_Bugs_Project.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -121,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1778089015334</updated>
-      <workItem from="1778089016455" duration="8680000" />
+      <workItem from="1778089016455" duration="9003000" />
     </task>
     <task id="LOCAL-00001" summary="Bug made">
       <option name="closed" value="true" />
@@ -171,17 +165,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778097934610</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixes and broken">
+      <option name="closed" value="true" />
+      <created>1778105433339</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778105433339</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bug made" />
     <MESSAGE value="Made the rest of files" />
     <MESSAGE value="Did the board" />
     <MESSAGE value="Did the board fully - functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Did the board fully - functions" />
+    <MESSAGE value="Fixes and broken" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes and broken" />
   </component>
 </project>
