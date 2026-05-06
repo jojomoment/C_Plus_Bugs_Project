@@ -39,4 +39,27 @@ void board::loadFromFile()
 
     }
 
+    void Board::displayBugs(); {
+        for (Bug* b : bugs) {
+            auto pos = b->getPosition();
+            cout << b->getId() << " (" << pos.first << "," << pos.second << ")\n";
+        }
+    }
+
+    void Board::findBug(int id); {
+        for (Bug* b : bugs) {
+            if (b->getId() == id) {
+                cout << "Found bug " << id << endl;
+                return;
+            }
+        }
+        cout << "Not found\n";
+    }
+
+    void Board::tap(); {
+        for (Bug* b : bugs) {
+            b->move(); // polymorphism
+        }
+    }
+
 }
