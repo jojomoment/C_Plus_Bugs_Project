@@ -5,19 +5,23 @@
 #include "Hopper.h"
 #include <cstdlib>
 
-Hopper::Hopper(int id, int x, int y, int dir, int health, int hop) {
-    Bug(id, x, y, dir, health); {
+Hopper::Hopper(int id, int x, int y, int dir, int health, int hop)
+{
+    Bug(id, x, y, dir, health);
+    {
         hopperJumpLength = hop;
     }
 
     void Hopper::move(); {
         if (!alive) return;
 
-        while (isWayBlocked()) {
+        while (isWayBlocked())
+        {
             direction = rand()%4 + 1;
         }
 
-        for (int i = 0; i < hopperJumpLength; i++) {
+        for (int i = 0; i < hopperJumpLength; i++)
+        {
             if (isWayBlocked()) break;
 
             if (direction == 1) position.second--;

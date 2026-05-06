@@ -5,7 +5,8 @@
 #pragma once
 #include "Bug.h"
 
-class Hopper : public Bug {
+class Hopper : public Bug
+{
     private:
     int hopperJumpLength;
 

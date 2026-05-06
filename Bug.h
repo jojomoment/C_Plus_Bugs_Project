@@ -7,7 +7,8 @@
 #include <list>
 using namespace std;
 
-class Bug {
+class Bug
+{
 protected:
     int id;
     pair<int,int> position;

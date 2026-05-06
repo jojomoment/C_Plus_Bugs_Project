@@ -4,7 +4,8 @@
 
 #include "Bug.h"
 
-Bug::Bug(int id, int x, int y, int dir, int health) {
+Bug::Bug(int id, int x, int y, int dir, int health)
+{
     this->id = id;
     position = {x,y};
     direction = dir;

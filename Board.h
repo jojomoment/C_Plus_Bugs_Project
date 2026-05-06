@@ -2,7 +2,17 @@
 // Created by Elvis on 06/05/2026.
 //
 
-#ifndef TEST_BOARD_H
-#define TEST_BOARD_H
+#pragma once
+#include <vector>
+#include "Bug.h"
 
-#endif //TEST_BOARD_H
+class Board {
+    private:
+    vector<Bug*> bugs;
+
+    public:
+    void loadFromFile();
+    void displayBugs();
+    void findBug();
+    void tap();
+};
