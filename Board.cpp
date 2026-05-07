@@ -195,7 +195,21 @@ void Board::displayGrid()
             }
             else
             {
-                cout << grid[x][y][0]->getId();
+                for (int i = 0; i < grid[x][y].size(); i++)
+                {
+                    Bug* b = grid[x][y][i];
+
+                    // identify type using dynamic_cast
+                    if (dynamic_cast<Crawler*>(b))
+                        cout << "Crawler ";
+                    else if (dynamic_cast<Hopper*>(b))
+                        cout << "Hopper ";
+
+                    cout << b->getId();
+
+                    if (i != grid[x][y].size() - 1)
+                        cout << ", ";
+                }
             }
 
             cout << endl;

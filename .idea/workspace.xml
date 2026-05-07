@@ -29,9 +29,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fcd4aed-2840-49be-9080-02d6987a5da4" name="Changes" comment="fixed hopper">
+    <list default="true" id="5fcd4aed-2840-49be-9080-02d6987a5da4" name="Changes" comment="Display Life History of all bugs fully working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Board.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/Board.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,6 +99,11 @@
   </component>
   <component name="RunManager" selected="CMake Application.C_Plus_Bugs_Project">
     <configuration name="C_Plus_Bugs_Project" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C_Plus_Bugs_Project" TARGET_NAME="C_Plus_Bugs_Project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="C_Plus_Bugs_Project" RUN_TARGET_NAME="C_Plus_Bugs_Project">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -203,13 +209,13 @@
       <option name="project" value="LOCAL" />
       <updated>1778192780111</updated>
     </task>
-    <task id="LOCAL-00011" summary="fixed hopper">
+    <task id="LOCAL-00011" summary="Display Life History of all bugs fully working">
       <option name="closed" value="true" />
-      <created>1778193775848</created>
+      <created>1778194182923</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1778193775848</updated>
+      <updated>1778194182923</updated>
     </task>
     <option name="localTasksCounter" value="12" />
     <servers />
@@ -231,7 +237,7 @@
     <MESSAGE value="Fixed hopper" />
     <MESSAGE value="Movement for bugs" />
     <MESSAGE value="THE BUGS MOVE" />
-    <MESSAGE value="fixed hopper" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed hopper" />
+    <MESSAGE value="Display Life History of all bugs fully working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display Life History of all bugs fully working" />
   </component>
 </project>

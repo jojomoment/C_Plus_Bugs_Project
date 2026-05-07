@@ -29,7 +29,7 @@ int main() {
                 break;
 
             case 5:
-
+                board.updateGrid();
                 board.displayGrid();
                 break;
 
