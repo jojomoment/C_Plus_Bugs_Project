@@ -96,11 +96,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.C_Plus_Bugs_Project">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C_Plus_Bugs_Project" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C_Plus_Bugs_Project" TARGET_NAME="C_Plus_Bugs_Project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="C_Plus_Bugs_Project" RUN_TARGET_NAME="C_Plus_Bugs_Project">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -113,8 +108,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="C/C++ File.main.cpp" />
       <item itemvalue="CMake Application.C_Plus_Bugs_Project" />
+      <item itemvalue="C/C++ File.main.cpp" />
     </list>
   </component>
   <component name="TaskManager">
