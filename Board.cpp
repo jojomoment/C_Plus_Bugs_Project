@@ -64,13 +64,16 @@ void Board::displayBugs()
 
     void Board::findBug(int id)
     {
-        for (Bug* b : bugs) {
-            if (b->getId() == id) {
+        for (Bug* b : bugs)
+            {
+            if (b->getId() == id)
+                {
                 cout << "Found bug " << id << endl;
+                b->display();
                 return;
             }
         }
-        cout << "Not found\n";
+    cout << "bug " << id << " not found\n";
     }
 
 void Board::tap()
