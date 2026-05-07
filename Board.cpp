@@ -12,34 +12,52 @@ using namespace std;
 
 void Board::loadFromFile()
 {
-    ifstream file("bugs.txt");  //reads file
+    ifstream file("Bugs.txt");
+
+    if (!file)
+    {
+        cout << "Failed to open file\n";
+        return;
+    }
+
     string line;
 
     while (getline(file, line))
     {
         stringstream ss(line);
+
         char type;
-        int id,x,y,dir,health,hop;
+        int id, x, y, dir, health, hop;
 
         ss >> type; ss.ignore();
         ss >> id; ss.ignore();
         ss >> x; ss.ignore();
         ss >> y; ss.ignore();
         ss >> dir; ss.ignore();
-        ss >> health; ss.ignore();
+        ss >> health;
 
+        // Crawler
         if (type == 'C')
         {
-            bugs.push_back(new Crawler(id, x, y, dir, health));
-        }
-        else
-        {
-            ss.ignore();
-            ss >> hop;
-            bugs.push_back(new Hopper(id, x, y, dir, health, hop));
+            bugs.push_back(
+                new Crawler(id, x, y, dir, health)
+            );
         }
 
+        // Hopper
+        else if (type == 'H')
+        {
+            ss.ignore(); // ignore ; before hop
+            ss >> hop;
+
+            bugs.push_back(
+                new Hopper(id, x, y, dir, health, hop)
+            );
+        }
     }
+
+    cout << "Bugs loaded successfully\n";
+
     updateGrid();
 }
 
@@ -66,14 +84,28 @@ void Board::tap()
 {
     cout << "\nTapping board...\n";
 
+    cout << "Moving bugs...\n";
+
     for (Bug* b : bugs)
     {
+        cout << "Moving bug " << b->getId() << endl;
+
         b->move();
+
+        cout << "Finished moving bug " << b->getId() << endl;
     }
 
-    updateGrid();       // place bugs into cells
-    resolveFights();    // NEW: handle collisions
-    updateGrid();       // refresh after deaths
+    cout << "Updating grid...\n";
+
+    updateGrid();
+
+    cout << "Resolving fights...\n";
+
+    resolveFights();
+
+    cout << "Updating grid again...\n";
+
+    updateGrid();
 
     cout << "Tap complete.\n";
 }
@@ -179,14 +211,17 @@ void Board::displayGrid()
             {
                 cout << "empty";
             }
-            else
+            for (Bug* b : grid[x][y])
             {
-                cout << grid[x][y][0]->getId();
+                cout << b->getId() << " ";
             }
 
             cout << endl;
         }
     }
+
+
+
 }
 
 

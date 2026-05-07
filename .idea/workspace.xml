@@ -29,9 +29,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fcd4aed-2840-49be-9080-02d6987a5da4" name="Changes" comment="Movement for bugs">
+    <list default="true" id="5fcd4aed-2840-49be-9080-02d6987a5da4" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Board.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/Board.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +95,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kamil\CLionProjects\C_Plus_Bugs_Project" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Elvis\CLionProjects\C_Plus_Bugs_Project\cmake-build-debug" />
+      <recent name="C:\Users\Elvis\CLionProjects\C_Plus_Bugs_Project" />
+    </key>
   </component>
   <component name="RunManager" selected="CMake Application.C_Plus_Bugs_Project">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
@@ -125,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1778089015334</updated>
       <workItem from="1778089016455" duration="10296000" />
-      <workItem from="1778180892457" duration="6080000" />
+      <workItem from="1778180892457" duration="7026000" />
     </task>
     <task id="LOCAL-00001" summary="Bug made">
       <option name="closed" value="true" />
@@ -199,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778185322425</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1778190629633</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1778190629633</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +231,7 @@
     <MESSAGE value="Fixes and broken" />
     <MESSAGE value="Fixed hopper" />
     <MESSAGE value="Movement for bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Movement for bugs" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>
