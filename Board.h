@@ -12,7 +12,7 @@ private:
     std::vector<Bug*> grid[10][10];
 
     void clearGrid();
-    void updateGrid();
+
     void resolveFights();
 
 public:
@@ -28,4 +28,5 @@ public:
 
 
     bool isGameOver();
+    void updateGrid();
 };
