@@ -171,43 +171,22 @@ void Board::displayGrid()
 {
     for (int y = 0; y < 10; y++)
     {
-        // top border of row
         for (int x = 0; x < 10; x++)
         {
-            cout << "+----";
-        }
-        cout << "+" << endl;
-
-        // cell contents
-        for (int x = 0; x < 10; x++)
-        {
-            cout << "|";
+            cout << "(" << x << "," << y << "): ";
 
             if (grid[x][y].empty())
             {
-                cout << " .  ";
+                cout << "empty";
             }
             else
             {
-                // show first bug in cell
                 cout << grid[x][y][0]->getId();
-
-                // spacing adjustment
-                if (grid[x][y][0]->getId() < 10)
-                    cout << "  ";
-                else if (grid[x][y][0]->getId() < 100)
-                    cout << " ";
             }
-        }
-        cout << "|" << endl;
-    }
 
-    // bottom border
-    for (int x = 0; x < 10; x++)
-    {
-        cout << "+----";
+            cout << endl;
+        }
     }
-    cout << "+" << endl;
 }
 
 
