@@ -7,7 +7,7 @@ int main() {
     int choice;
 
     do {
-   cout << "\n1.Load\n2.Display\n3.Find\n4.Tap\n5.Grid\n8.Exit\n";        cin >> choice;
+   cout << "\n1.Load\n2.Display\n3.Find\n4.Tap\n5.Grid\n6.Display Life History of all bugs\n8.Exit\n";        cin >> choice;
 
         switch(choice)
             {
@@ -29,6 +29,10 @@ int main() {
             case 5:
 
                 board.displayGrid();
+                break;
+
+            case 6:
+                board.displayLifeHistory();
                 break;
         }
 

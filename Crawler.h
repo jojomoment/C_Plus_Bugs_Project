@@ -19,4 +19,6 @@ public: // accessable outside of class
     void move() override;
 
     void display();
+
+    void displayHistory();
 };

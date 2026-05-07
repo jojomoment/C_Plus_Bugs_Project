@@ -69,3 +69,13 @@ void Crawler::display()
          << (alive ? "Alive" : "Dead")
          << endl;
 }
+
+void Crawler::displayHistory()
+{
+    cout << id << " Crawler Path: ";
+
+    for (auto &p : path)
+        cout << "(" << p.first << "," << p.second << "),";
+
+    cout << (alive ? " Alive!" : " Dead!") << endl;
+}

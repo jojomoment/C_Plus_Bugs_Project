@@ -21,6 +21,8 @@ public:
 
     virtual void display() = 0;
 
+    virtual void displayHistory() = 0;
+
 
     bool isWayBlocked();
 

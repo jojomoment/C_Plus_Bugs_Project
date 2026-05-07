@@ -202,7 +202,13 @@ void Board::displayGrid()
         }
     }
 }
-
+void Board::displayLifeHistory()
+{
+    for (Bug* b : bugs)
+    {
+        b->displayHistory();
+    }
+}
 
 
 

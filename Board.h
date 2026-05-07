@@ -20,6 +20,7 @@ public:
     void displayBugs();
     void findBug(int id);
     void tap();
+    void displayLifeHistory();
 
     // optional but VERY useful later
     void displayGrid();

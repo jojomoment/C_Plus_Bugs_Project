@@ -74,5 +74,16 @@ void Hopper::display()
 }
 
 
+void Hopper::displayHistory()
+{
+    cout << id << " Hopper Path: ";
+
+    for (auto &p : path)
+        cout << "(" << p.first << "," << p.second << "),";
+
+    cout << (alive ? " Alive!" : " Dead!") << endl;
+}
+
+
 
 

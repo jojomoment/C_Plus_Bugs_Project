@@ -16,4 +16,6 @@ public:
     void move() override;
 
     void display();
+
+    void displayHistory();
 };
