@@ -10,31 +10,48 @@ Hopper::Hopper(int id, int x, int y, int dir, int health, int hop)
 
 
     {
-        hopperJumpLength = hop;
+        hopLength = hop;
     }
 
-    void Hopper::move()
+void Hopper::move()
+{
+    // dead bug
+    if (!alive)
+        return;
+
+    // choose new direction if its blocked
+    while (isWayBlocked())
     {
-        if (!alive) return;
-
-        while (isWayBlocked())
-        {
-            direction = rand()%4 + 1;
-        }
-
-        for (int i = 0; i < hopperJumpLength; i++)
-        {
-            if (isWayBlocked()) break;
-
-            if (direction == 1) position.second--;
-            if (direction == 2) position.first++;
-            if (direction == 3) position.second++;
-            if (direction == 4) position.first--;
-        }
-
-        path.push_back(position);
-
+        direction = rand() % 4 + 1;
     }
+
+    // move hopLength spaces
+    for (int i = 0; i < hopLength; i++)
+    {
+        // stop if edge reached
+        if (isWayBlocked())
+            break;
+
+        // North
+        if (direction == 1)
+            position.second--;
+
+        // East
+        else if (direction == 2)
+            position.first++;
+
+        // South
+        else if (direction == 3)
+            position.second++;
+
+        // West
+        else if (direction == 4)
+            position.first--;
+    }
+
+    // record new position
+    path.push_back(position);
+}
 
 
 

@@ -8,7 +8,7 @@
 class Hopper : public Bug
 {
 private:
-    int hopperJumpLength;
+    int hopLength;
 
 public:
     Hopper(int id, int x, int y, int dir, int health, int hop);

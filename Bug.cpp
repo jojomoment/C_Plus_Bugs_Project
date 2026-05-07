@@ -19,7 +19,28 @@ Bug::Bug(int id, int x, int y, int dir, int health)
 int Bug::getId() { return id; }
 pair<int,int> Bug::getPosition() { return position; }
 bool Bug::isAlive() { return alive; }
-bool Bug::isWayBlocked(){return false;}
+
+bool Bug::isWayBlocked(){
+
+    int x = position.first;
+    int y = position.second;
+
+    //North
+    if (direction == 1 && y == 0)
+        return true;
+
+    // East
+    if (direction == 2 && x == 9)
+        return true;
+
+    // South
+    if (direction == 3 && y == 9)
+        return true;
+
+    // West
+    if (direction == 4 && x == 0)
+        return true;
+}
 
 int Bug::getHealth()
 {

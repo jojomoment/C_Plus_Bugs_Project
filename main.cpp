@@ -21,7 +21,10 @@ int main() {
                 board.findBug(id);
                 break;
             }
-            case 4: board.tap(); break;
+            case 4: board.tap();
+                board.tap();
+                board.displayBugs();
+                break;
 
             case 5:
 
