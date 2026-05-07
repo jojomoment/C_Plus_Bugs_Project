@@ -24,4 +24,7 @@ public:
     int getId();
     std::pair<int, int> getPosition();
     bool isAlive();
+
+    int getHealth();
+    void setAlive(bool status);
 };

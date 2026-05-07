@@ -20,3 +20,13 @@ int Bug::getId() { return id; }
 pair<int,int> Bug::getPosition() { return position; }
 bool Bug::isAlive() { return alive; }
 bool Bug::isWayBlocked(){return false;}
+
+int Bug::getHealth()
+{
+    return health;
+}
+
+void Bug::setAlive(bool status)
+{
+    alive = status;
+}

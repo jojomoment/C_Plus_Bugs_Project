@@ -40,6 +40,7 @@ void Board::loadFromFile()
         }
 
     }
+    updateGrid();
 }
 
     void Board::displayBugs()
@@ -61,12 +62,154 @@ void Board::loadFromFile()
         cout << "Not found\n";
     }
 
-    void Board::tap()
+void Board::tap()
+{
+    cout << "\nTapping board...\n";
+
+    for (Bug* b : bugs)
     {
-        for (Bug* b : bugs) {
-            b->move(); // polymorphism
+        b->move();
+    }
+
+    updateGrid();       // place bugs into cells
+    resolveFights();    // NEW: handle collisions
+    updateGrid();       // refresh after deaths
+
+    cout << "Tap complete.\n";
+}
+
+void Board::clearGrid()
+{
+    for (int x = 0; x < 10; x++)
+    {
+        for (int y = 0; y < 10; y++)
+        {
+            grid[x][y].clear();
         }
     }
+}
+
+
+void Board::updateGrid()
+{
+    // clear grid first
+    for (int x = 0; x < 10; x++)
+    {
+        for (int y = 0; y < 10; y++)
+        {
+            grid[x][y].clear();
+        }
+    }
+
+    // re-add all alive bugs into grid
+    for (Bug* b : bugs)
+    {
+        if (b->isAlive())
+        {
+            auto pos = b->getPosition();
+
+            int x = pos.first;
+            int y = pos.second;
+
+            if (x >= 0 && x < 10 && y >= 0 && y < 10)
+            {
+                grid[x][y].push_back(b);
+            }
+        }
+    }
+}
+
+void Board::resolveFights()
+{
+    for (int x = 0; x < 10; x++)
+    {
+        for (int y = 0; y < 10; y++)
+        {
+            auto &cell = grid[x][y];
+
+            if (cell.size() <= 1) continue;
+
+            // find strongest bug
+            Bug* strongest = cell[0];
+
+            for (Bug* b : cell)
+            {
+                if (b->getHealth() > strongest->getHealth())
+                    strongest = b;
+            }
+
+            // kill others
+            for (Bug* b : cell)
+            {
+                if (b != strongest)
+                {
+                    b->setAlive(false);
+                }
+            }
+
+            // keep only strongest in cell
+            cell.clear();
+            cell.push_back(strongest);
+        }
+    }
+}
+
+bool Board::isGameOver()
+{
+    int aliveCount = 0;
+
+    for (Bug* b : bugs)
+    {
+        if (b->isAlive())
+            aliveCount++;
+    }
+
+    return aliveCount <= 1;
+}
+
+void Board::displayGrid()
+{
+    for (int y = 0; y < 10; y++)
+    {
+        // top border of row
+        for (int x = 0; x < 10; x++)
+        {
+            cout << "+----";
+        }
+        cout << "+" << endl;
+
+        // cell contents
+        for (int x = 0; x < 10; x++)
+        {
+            cout << "|";
+
+            if (grid[x][y].empty())
+            {
+                cout << " .  ";
+            }
+            else
+            {
+                // show first bug in cell
+                cout << grid[x][y][0]->getId();
+
+                // spacing adjustment
+                if (grid[x][y][0]->getId() < 10)
+                    cout << "  ";
+                else if (grid[x][y][0]->getId() < 100)
+                    cout << " ";
+            }
+        }
+        cout << "|" << endl;
+    }
+
+    // bottom border
+    for (int x = 0; x < 10; x++)
+    {
+        cout << "+----";
+    }
+    cout << "+" << endl;
+}
+
 
 
 
