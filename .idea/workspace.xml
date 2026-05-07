@@ -29,12 +29,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fcd4aed-2840-49be-9080-02d6987a5da4" name="Changes" comment="Fixed hopper">
+    <list default="true" id="5fcd4aed-2840-49be-9080-02d6987a5da4" name="Changes" comment="Movement for bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bug.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bug.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crawler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hopper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hopper.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hopper.h" beforeDir="false" afterPath="$PROJECT_DIR$/Hopper.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1778089015334</updated>
       <workItem from="1778089016455" duration="10296000" />
-      <workItem from="1778180892457" duration="4115000" />
+      <workItem from="1778180892457" duration="6080000" />
     </task>
     <task id="LOCAL-00001" summary="Bug made">
       <option name="closed" value="true" />
@@ -194,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778105744057</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Movement for bugs">
+      <option name="closed" value="true" />
+      <created>1778185322425</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778185322425</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +217,7 @@
     <MESSAGE value="Did the board fully - functions" />
     <MESSAGE value="Fixes and broken" />
     <MESSAGE value="Fixed hopper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed hopper" />
+    <MESSAGE value="Movement for bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Movement for bugs" />
   </component>
 </project>
