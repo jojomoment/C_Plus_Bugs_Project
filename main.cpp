@@ -1,5 +1,7 @@
 #include "Board.h"
 #include <iostream>
+#include <thread>
+#include <chrono>
 using namespace std;
 
 int main() {
@@ -7,7 +9,7 @@ int main() {
     int choice;
 
     do {
-   cout << "\n1.Load\n2.Display\n3.Find\n4.Tap\n5.Grid\n6.Display Life History of all bugs\n8.Exit\n";        cin >> choice;
+   cout << "\n1.Load\n2.Display\n3.Find\n4.Tap\n5.Grid\n6.Display Life History of all bugs\n7.Start Simulation of bugs\n8.Exit\n";        cin >> choice;
 
         switch(choice)
             {
@@ -34,6 +36,20 @@ int main() {
             case 6:
                 board.displayLifeHistory();
                 break;
+
+            case 7:
+            {
+                while (!board.isGameOver())
+                {
+                    board.tap();
+                    board.displayBugs();
+
+                    std::this_thread::sleep_for(std::chrono::seconds(1));
+                }
+
+                cout << "Simulation finished!\n";
+                break;
+            }
         }
 
     } while (choice != 8);

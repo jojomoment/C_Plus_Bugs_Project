@@ -20,7 +20,7 @@ void Board::loadFromFile()
         return;
     }
 
-    cout << "bugs.txt opened successfully!" << endl;
+    cout << "bugs.txt opened successfully" << endl;
 
     string line;
 
@@ -86,7 +86,7 @@ void Board::tap()
     }
 
     updateGrid();       // place bugs into cells
-    resolveFights();    // NEW: handle collisions
+    resolveFights();    // handle collisions
     updateGrid();       // refresh after deaths
 
     cout << "Tap complete.\n";
