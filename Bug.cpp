@@ -20,12 +20,12 @@ int Bug::getId() { return id; }
 pair<int,int> Bug::getPosition() { return position; }
 bool Bug::isAlive() { return alive; }
 
-bool Bug::isWayBlocked(){
-
+bool Bug::isWayBlocked()
+{
     int x = position.first;
     int y = position.second;
 
-    //North
+    // North
     if (direction == 1 && y == 0)
         return true;
 
@@ -40,6 +40,8 @@ bool Bug::isWayBlocked(){
     // West
     if (direction == 4 && x == 0)
         return true;
+
+    return false;
 }
 
 int Bug::getHealth()
