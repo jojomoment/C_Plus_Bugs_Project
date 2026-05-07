@@ -27,26 +27,26 @@ void Board::loadFromFile()
     while (getline(file, line))
     {
         stringstream ss(line);
-        char type;
-        int id,x,y,dir,health,hop;
+        char type, comma;
+        int id, x, y, dir, health, hop;
 
-        ss >> type; ss.ignore();
-        ss >> id; ss.ignore();
-        ss >> x; ss.ignore();
-        ss >> y; ss.ignore();
-        ss >> dir; ss.ignore();
-        ss >> health; ss.ignore();
+        ss >> type >> comma
+           >> id >> comma
+           >> x >> comma
+           >> y >> comma
+           >> dir >> comma
+           >> health;
 
         if (type == 'C')
         {
             bugs.push_back(new Crawler(id, x, y, dir, health));
         }
-        else
+        else if (type == 'H')
         {
-            ss.ignore();
-            ss >> hop;
+            ss >> comma >> hop;
             bugs.push_back(new Hopper(id, x, y, dir, health, hop));
         }
+
 
     }
     updateGrid();

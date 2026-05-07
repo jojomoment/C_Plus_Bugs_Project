@@ -9,12 +9,10 @@
 using namespace std;
 
 Hopper::Hopper(int id, int x, int y, int dir, int health, int hop)
-: Bug(id, x, y, dir, health)
-
-
-    {
-        hopLength = hop;
-    }
+    : Bug(id, x, y, dir, health)
+{
+    hopLength = hop;
+}
 
 void Hopper::move()
 {
