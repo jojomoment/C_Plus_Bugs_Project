@@ -12,7 +12,16 @@ using namespace std;
 
 void Board::loadFromFile()
 {
-    ifstream file("bugs.txt");  //reads file
+    ifstream file("bugs.txt");
+
+    if (!file)
+    {
+        cout << "FAILED TO OPEN bugs.txt" << endl;
+        return;
+    }
+
+    cout << "bugs.txt opened successfully!" << endl;
+
     string line;
 
     while (getline(file, line))
