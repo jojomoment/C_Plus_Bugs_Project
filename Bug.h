@@ -1,21 +1,22 @@
 #pragma once
 #include <utility>
 #include <list>
+using namespace std;
 
 class Bug
 {
 protected:
     int id;
-    std::pair<int, int> position;
+    pair<int, int> position; //stores bugs x and y postiton
     int direction;
     int health;
     bool alive;
-    std::list<std::pair<int, int>> path;
+    list<std::pair<int, int>> path; // tracks bugs movement
 
 public:
     Bug(int id, int x, int y, int dir, int health);
 
-    virtual ~Bug() = default;   // IMPORTANT for polymorphism
+    virtual ~Bug() = default;// destructor that runs whenever a bug object is deleted
 
     virtual void move() = 0;
 
@@ -27,9 +28,11 @@ public:
     bool isWayBlocked();
 
     int getId();
-    std::pair<int, int> getPosition();
+    pair<int, int> getPosition();
     bool isAlive();
 
     int getHealth();
     void setAlive(bool status);
+
+    const list<std::pair<int,int>>& getPath() const;
 };

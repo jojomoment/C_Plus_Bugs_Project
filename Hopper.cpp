@@ -8,11 +8,14 @@
 #include <string>
 using namespace std;
 
+// hopper constructor
+// specific variable, hoplength
 Hopper::Hopper(int id, int x, int y, int dir, int health, int hop)
     : Bug(id, x, y, dir, health)
 {
     hopLength = hop;
 }
+
 
 void Hopper::move()
 {
@@ -23,6 +26,7 @@ void Hopper::move()
     // choose new direction if its blocked
     while (isWayBlocked())
     {
+        //random direction for bug to face
         direction = rand() % 4 + 1;
     }
 

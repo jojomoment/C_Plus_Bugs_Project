@@ -5,6 +5,7 @@
 #pragma once
 #include "Bug.h"
 
+//hopper is a type of bug (inheritance)
 class Hopper : public Bug
 {
 private:

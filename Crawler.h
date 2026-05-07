@@ -10,15 +10,16 @@ class Crawler : public Bug
 
 public: // accessable outside of class
 
-
-
     //constructor
     Crawler(int id,int x,int y,int direction,int health);
 
-    // Override move()
+    // move function override
+    // replaces base version of move
     void move() override;
 
+    // display function
     void display();
 
+    // display history function
     void displayHistory();
 };

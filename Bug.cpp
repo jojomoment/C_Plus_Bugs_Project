@@ -3,9 +3,12 @@
 //
 
 #include "Bug.h"
+#include <fstream>
+#include <ctime>
 
 using namespace std;
 
+//constructor
 Bug::Bug(int id, int x, int y, int dir, int health)
 {
     this->id = id;
@@ -13,9 +16,10 @@ Bug::Bug(int id, int x, int y, int dir, int health)
     direction = dir;
     this->health = health;
     alive = true;
-    path.push_back(position);
+    path.push_back(position); // bugs movement history
 }
 
+//getters
 int Bug::getId() { return id; }
 pair<int,int> Bug::getPosition() { return position; }
 bool Bug::isAlive() { return alive; }
@@ -52,4 +56,9 @@ int Bug::getHealth()
 void Bug::setAlive(bool status)
 {
     alive = status;
+}
+
+const std::list<std::pair<int,int>>& Bug::getPath() const
+{
+    return path;
 }
