@@ -52,13 +52,15 @@ void Board::loadFromFile()
     updateGrid();
 }
 
-    void Board::displayBugs()
+void Board::displayBugs()
+{
+    for (Bug* b : bugs)
     {
-        for (Bug* b : bugs) {
-            auto pos = b->getPosition();
-            cout << b->getId() << " (" << pos.first << "," << pos.second << ")\n";
-        }
+        b->display();
     }
+}
+
+
 
     void Board::findBug(int id)
     {
@@ -197,6 +199,8 @@ void Board::displayGrid()
         }
     }
 }
+
+
 
 
 

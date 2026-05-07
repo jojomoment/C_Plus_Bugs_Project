@@ -14,4 +14,6 @@ public:
     Hopper(int id, int x, int y, int dir, int health, int hop);
 
     void move() override;
+
+    void display();
 };

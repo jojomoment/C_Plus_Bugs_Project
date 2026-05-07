@@ -17,4 +17,6 @@ public: // accessable outside of class
 
     // Override move()
     void move() override;
+
+    void display();
 };

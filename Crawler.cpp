@@ -50,3 +50,22 @@ void Crawler::move()
     // save new position
     path.push_back(position);
 }
+
+void Crawler::display()
+{
+    string dirText;
+
+    if(direction == 1) dirText = "North";
+    else if(direction == 2) dirText = "East";
+    else if(direction == 3) dirText = "South";
+    else dirText = "West";
+
+    cout << id
+         << " Crawler "
+         << "(" << position.first << "," << position.second << ") "
+         << health << " "
+         << dirText << " "
+         << "- "
+         << (alive ? "Alive" : "Dead")
+         << endl;
+}
